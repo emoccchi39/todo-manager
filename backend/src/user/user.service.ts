@@ -16,7 +16,7 @@ export class UserService {
       data: {
         name,
         email,
-        passsword: hashedPassword,
+        password: hashedPassword,
       },
     });
   }
