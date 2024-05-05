@@ -7,12 +7,14 @@ import SignUp from "./components/SignUp";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import client from "./apolloClient";
 import { ApolloProvider } from "@apollo/client";
+import Test from "./components/Test";
 
 function App() {
   return (
     <ApolloProvider client={client}>
       <BrowserRouter>
         <Routes>
+          <Route path="/test" element={<Test />} />
           <Route
             path="/signin"
             element={<GuestRoute children={<SignIn />} />}
